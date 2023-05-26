@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Sys_role",
+    "pageId": "用户信息",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "DELETE FROM sys_role\n  WHERE ID = {{data_table.triggeredRow.ID}};",
+      "body": "DELETE FROM sys_user\n  WHERE ID = {{data_table.triggeredRow.ID}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -38,7 +38,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Sys_role_DeleteQuery",
+  "id": "用户信息_DeleteQuery",
   "deleted": false,
-  "gitSyncId": "645e1dc6d617784106cad6ea_646583c8cd311d5b2f893a0b"
+  "gitSyncId": "645e1dc6d617784106cad6ea_64658500cd311d5b2f893a47"
 }

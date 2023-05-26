@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "DeleteQuery",
+    "name": "SelectQuery",
     "datasource": {
       "name": "Untitled Datasource 1",
       "pluginId": "mysql-plugin",
@@ -13,32 +13,36 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Sys_user",
+    "pageId": "角色信息",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "DELETE FROM sys_user\n  WHERE ID = {{data_table.triggeredRow.ID}};",
+      "body": "SELECT * FROM sys_role\nWHERE ID like '%{{data_table.searchText || \"\"}}%'\nORDER BY {{data_table.sortOrder.column || 'ID'}} {{data_table.sortOrder.order || \"ASC\"}}\nLIMIT {{data_table.pageSize}}\nOFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "data_table.triggeredRow.ID"
+      "(data_table.pageNo - 1) * data_table.pageSize",
+      "data_table.pageSize",
+      "data_table.searchText || \"\"",
+      "data_table.sortOrder.column || 'ID'",
+      "data_table.sortOrder.order || \"ASC\""
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Sys_user_DeleteQuery",
+  "id": "角色信息_SelectQuery",
   "deleted": false,
-  "gitSyncId": "645e1dc6d617784106cad6ea_64658500cd311d5b2f893a47"
+  "gitSyncId": "645e1dc6d617784106cad6ea_646583c8cd311d5b2f893a0c"
 }

@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Sys_dict",
+    "pageId": "数据字典",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -44,7 +44,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Sys_dict_UpdateQuery",
+  "id": "数据字典_UpdateQuery",
   "deleted": false,
   "gitSyncId": "645e1dc6d617784106cad6ea_646583b8cd311d5b2f893a04"
 }

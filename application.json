@@ -5,15 +5,15 @@
       "isDefault": true
     },
     {
-      "id": "Sys_dict",
+      "id": "数据字典",
       "isDefault": false
     },
     {
-      "id": "Sys_role",
+      "id": "角色信息",
       "isDefault": false
     },
     {
-      "id": "Sys_user",
+      "id": "用户信息",
       "isDefault": false
     }
   ],

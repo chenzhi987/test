@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Sys_role",
+    "pageId": "数据字典",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM sys_role\nWHERE ID like '%{{data_table.searchText || \"\"}}%'\nORDER BY {{data_table.sortOrder.column || 'ID'}} {{data_table.sortOrder.order || \"ASC\"}}\nLIMIT {{data_table.pageSize}}\nOFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};",
+      "body": "SELECT * FROM sys_dict\nWHERE name like '%{{data_table.searchText || \"\"}}%'\nORDER BY {{data_table.sortOrder.column || 'dict_id'}} {{data_table.sortOrder.order || \"ASC\"}}\nLIMIT {{data_table.pageSize}}\nOFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -34,7 +34,7 @@
       "(data_table.pageNo - 1) * data_table.pageSize",
       "data_table.pageSize",
       "data_table.searchText || \"\"",
-      "data_table.sortOrder.column || 'ID'",
+      "data_table.sortOrder.column || 'dict_id'",
       "data_table.sortOrder.order || \"ASC\""
     ],
     "userSetOnLoad": true,
@@ -42,7 +42,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Sys_role_SelectQuery",
+  "id": "数据字典_SelectQuery",
   "deleted": false,
-  "gitSyncId": "645e1dc6d617784106cad6ea_646583c8cd311d5b2f893a0c"
+  "gitSyncId": "645e1dc6d617784106cad6ea_646583b8cd311d5b2f893a03"
 }

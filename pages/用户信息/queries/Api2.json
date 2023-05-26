@@ -15,7 +15,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Sys_user",
+    "pageId": "用户信息",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -68,7 +68,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Sys_user_Api2",
+  "id": "用户信息_Api2",
   "deleted": false,
   "gitSyncId": "645e1dc6d617784106cad6ea_64658b37cd311d5b2f893a74"
 }

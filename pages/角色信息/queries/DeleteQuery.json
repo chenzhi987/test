@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "Query3",
+    "name": "DeleteQuery",
     "datasource": {
       "name": "Untitled Datasource 1",
       "pluginId": "mysql-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Sys_user",
+    "pageId": "角色信息",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO sys_app (ID, NAME, LOGO, DESCRIPTION, CLASSIFY, STATUS, TENANT_ID, REVISION, CREATED_BY, CREATED_TIME, UPDATED_BY, UPDATED_TIME)\n  VALUES ('', '', '', '', '', 1, '', '', '', '2019-07-01 10:00:00', '', '2019-07-01 10:00:00');",
+      "body": "DELETE FROM sys_role\n  WHERE ID = {{data_table.triggeredRow.ID}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -30,13 +30,15 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "data_table.triggeredRow.ID"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Sys_user_Query3",
+  "id": "角色信息_DeleteQuery",
   "deleted": false,
-  "gitSyncId": "645e1dc6d617784106cad6ea_64658b01cd311d5b2f893a72"
+  "gitSyncId": "645e1dc6d617784106cad6ea_646583c8cd311d5b2f893a0b"
 }

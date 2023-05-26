@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Sys_role",
+    "pageId": "角色信息",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -47,7 +47,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Sys_role_InsertQuery",
+  "id": "角色信息_InsertQuery",
   "deleted": false,
   "gitSyncId": "645e1dc6d617784106cad6ea_646583c8cd311d5b2f893a0f"
 }

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "DeleteQuery",
+    "name": "Query1",
     "datasource": {
       "name": "Untitled Datasource 1",
       "pluginId": "mysql-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Sys_dict",
+    "pageId": "用户信息",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "DELETE FROM sys_dict\n  WHERE dict_id = {{data_table.triggeredRow.dict_id}};",
+      "body": "SELECT * FROM meta_data LIMIT 10;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -30,15 +30,13 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "data_table.triggeredRow.dict_id"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Sys_dict_DeleteQuery",
+  "id": "用户信息_Query1",
   "deleted": false,
-  "gitSyncId": "645e1dc6d617784106cad6ea_646583b8cd311d5b2f893a00"
+  "gitSyncId": "645e1dc6d617784106cad6ea_64658abfcd311d5b2f893a6e"
 }
